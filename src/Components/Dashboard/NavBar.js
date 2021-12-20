@@ -1,12 +1,13 @@
-import { AppBar, Toolbar, Typography, IconButton, Box, Button, Grid } from "@mui/material";
+import { AppBar, Toolbar, Typography, IconButton, Box, Button, Grid, MenuItem,  Menu, } from "@mui/material";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { styled, alpha } from '@mui/material/styles';
 import { useHistory } from "react-router";
+import { red } from '@mui/material/colors';
 
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 
-const NavBarHome = () => {
+const NavBar = () => {
     const history = useHistory();
     const menuId = "account-menu";
 
@@ -15,8 +16,34 @@ const NavBarHome = () => {
     };
 
     const redirectQuestions = () => {
+        history.push("/user-home");
+    };
+
+    const redirectCreateQuestions = () => {
+        history.push("/create-question");
+    };
+
+    const redirectMyQuestions = () => {
+        history.push("/user-home");
+    };
+
+    
+
+    const redirectHome = () => {
+        localStorage.setItem("email", "");
+        localStorage.setItem("accessToken", "");
         history.push("/");
     };
+
+    const ColorButton = styled(Button)(({ theme }) => ({
+        color: theme.palette.getContrastText(red[500]),
+        backgroundColor: red[500],
+        '&:hover': {
+          backgroundColor: red[700],
+        },
+      }));
+
+
 
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
@@ -70,6 +97,12 @@ const NavBarHome = () => {
                     <Grid item>
                         <Button onClick={redirectQuestions} variant="outlined" color="inherit" sx={{mr: 2}}>Preguntas</Button>
                     </Grid>
+                    <Grid item>
+                        <Button onClick={redirectCreateQuestions} variant="outlined" color="inherit" sx={{mr: 2}}>Crear pregunta</Button>
+                    </Grid>
+                    <Grid item>
+                        <Button onClick={redirectMyQuestions} variant="outlined" color="inherit" sx={{mr: 2}}>Mis preguntas</Button>
+                    </Grid>
                 </Grid>
             
                 <Search>
@@ -83,13 +116,11 @@ const NavBarHome = () => {
                 </Search>
 
                 <Box>
-                    <IconButton onClick={redirectLogin} aira-controls={menuId} aria-hashpopup="true" color="primary" size="large" edge="end">
-                        <AccountCircleIcon />
-                    </IconButton>
+                    <ColorButton onClick={redirectHome} variant="contained" sx={{mr: 2}}>Cerrar Sesion</ColorButton>  
                 </Box>
             </Toolbar>
         </AppBar>
     );
 }
 
-export default NavBarHome;
+export default NavBar;

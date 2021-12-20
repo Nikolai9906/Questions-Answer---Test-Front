@@ -15,7 +15,7 @@ import Item from '@mui/material/MenuItem';
 
 import { useHistory } from "react-router";
 
-function Question() {
+function UserQuestion() {
 
     const [ question, setQuestion ] = useState('');
     const history = useHistory();
@@ -37,7 +37,7 @@ function Question() {
 
     const getId = (id) => {
         localStorage.setItem("questionID",id);
-        let path = `../answer`; 
+        let path = `/user-answer`; 
         history.push(path);
     };
     
@@ -110,4 +110,4 @@ function Question() {
 
 
 }
-export default Question;
+export default UserQuestion;
