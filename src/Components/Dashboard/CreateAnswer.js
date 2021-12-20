@@ -12,14 +12,15 @@ import {
   import React, { useRef } from "react";
   import { useHistory } from "react-router";
   
-  
-  const CreateAnswer = (props) => {
+
+  const CreateAnswer = () => {
     
     const descriptionRef = useRef();
     const history = useHistory();
   
     
     const AddAnswer = () => {
+      if(!(descriptionRef.current.value == "" || descriptionRef.current.value == null)){
         axios.post(`http://localhost:8080/v1/answer`,{
             emailUser: localStorage.getItem("email"),
             title: "",
@@ -34,6 +35,10 @@ import {
             alert("El detalle de la respuesta es obligatorio")
             console.log(error)
         })
+      } else {
+        alert("El detalle de la respuesta es obligatorio")
+      }
+        
     };
   
     const returnUserAnswer = () => {

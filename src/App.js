@@ -6,6 +6,7 @@ import UserHome from './Components/Dashboard/UserHome'
 import UserAnswer from './Components/Dashboard/UserAnswer';
 import createAnswer from './Components/Dashboard/CreateAnswer';
 import CreateQuestion from './Components/Dashboard/CreateQuestion';
+import SignUp from './Components/SignUp/SignUp';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" component={Home} exact />
         <Route path="/answer" component={Answer} exact />
         <Route path="/login" component={Login} exact />
+        <Route path="/signup" component={SignUp} exact />
         <Route path="/user-home" component={UserHome} exact />
         <Route path="/user-answer" component={UserAnswer} exact />
         <Route path="/create-answer" component={createAnswer} exact />

@@ -12,6 +12,8 @@ import Item from '@mui/material/MenuItem';
 import NavBar from './NavBar';
 import { Button} from "@mui/material";
 import { useHistory } from "react-router";
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function UserAnswer(){
 
@@ -72,6 +74,11 @@ if (answer.length > 0) {
                                 {ele.emailUser}
                             </Typography>
                         </CardContent>
+                        <CardActions disableSpacing>
+                            <IconButton aria-label="add to favorites">
+                            <FavoriteIcon />
+                            </IconButton>
+                        </CardActions>
                     </Card>
             </Grid>
             )
@@ -87,10 +94,10 @@ if (answer.length > 0) {
         <Grid item xs={12}>
             <Item>x</Item>
         </Grid>
-        <Grid  style={{paddingTop:"5%", justifyContent: "center"}} container spacing={0}>
+        <Grid  style={{paddingTop:"5%", justifyContent: "center", paddingBottom: "1%"}} container spacing={0}>
             <Button  onClick={handleCreateAnswer} variant="contained"  sx={{mr: 2}} >Responder</Button>
         </Grid>
-        <Grid style ={{width:"100%" , justifyContent: "space-around", marginLeft: "-1%", paddingTop: "1%"}} container spacing={3}>
+        <Grid style ={{width:"100%" , justifyContent: "space-around", marginLeft: "-1%", paddingTop: "2%", paddingLeft: "2%"}}>
             {data}   
         </Grid>
     </div>

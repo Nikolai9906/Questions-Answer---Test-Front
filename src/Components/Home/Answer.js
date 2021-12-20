@@ -81,7 +81,7 @@ if (answer.length > 0) {
         <Grid item xs={12}>
             <Item>x</Item>
         </Grid>
-        <Grid style ={{width:"100%" , justifyContent: "space-around", marginLeft: "-1%", paddingTop: "5%"}} container spacing={3}>
+        <Grid style ={{width:"100%" , justifyContent: "space-around", marginLeft: "-1%", paddingTop: "2%", paddingLeft: "2%"}} >
             {data}   
         </Grid>
     </div>

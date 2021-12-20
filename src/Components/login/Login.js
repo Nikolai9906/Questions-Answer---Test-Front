@@ -31,6 +31,11 @@ const Login = () => {
     history.push("/signup")
   }
 
+  const returnUserAnswer = () => {
+    history.push("/");
+  };
+
+
   return (
     <div>
       <Container component="main" maxWidth="xs">
@@ -42,8 +47,10 @@ const Login = () => {
           <Box component="form" sx={{ mt: 1 }}>
             <TextField margin="normal" required fullWidth label="Email" name="email" type="email" inputRef={emailRef} />
             <TextField margin="normal" required fullWidth label="Password" name="password" type="password" inputRef={passwordRef} />
-            <Button fullWidth variant="contained" sx={{ mt: 3, mb: 3 }} onClick={loginRequest}>Log in</Button>
+            <Button fullWidth variant="contained" sx={{ mt: 3, mb: 3 }} onClick={loginRequest}>Ingresar</Button>
             <Button fullWidth variant="outlined" sx={{ mt: -1, mb: 3 }} onClick={createAccountRequest}>Crear Cuenta</Button>
+            <Button fullWidth variant="outlined" sx={{ mt: -1, mb: 3 }} onClick={returnUserAnswer}>Volver</Button>
+            
           </Box>
         </Box>
       </Container>

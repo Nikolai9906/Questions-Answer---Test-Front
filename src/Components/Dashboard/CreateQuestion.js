@@ -13,7 +13,7 @@ import {
   import { useHistory } from "react-router";
   
   
-  const CreateQuestion = (props) => {
+  const CreateQuestion = () => {
     
     const titleRef = useRef();
     const descriptionRef = useRef();
@@ -21,19 +21,25 @@ import {
   
     
     const AddQuestion = () => {
-        axios.post(`http://localhost:8080/v1/question`,{
+        if(!(descriptionRef.current.value == "" || descriptionRef.current.value == null 
+            ||titleRef.current.value == "" ||titleRef.current.value == null)){
+                axios.post(`http://localhost:8080/v1/question`,{
             emailUser: localStorage.getItem("email"),
             title: titleRef.current.value,
             detail: descriptionRef.current.value
-        },
-        { headers: {"Authorization" : `Bearer ${localStorage.getItem("accessToken")}`} })
-        .then((res) => {
-            alert("Pregunta creada")
-            history.push("/user-home");
-        }).catch((error) => {
-            alert("El detalle de la respuesta es obligatorio")
-            console.log(error)
-        })
+            },
+            { headers: {"Authorization" : `Bearer ${localStorage.getItem("accessToken")}`} })
+            .then((res) => {
+                alert("Pregunta creada")
+                history.push("/user-home");
+            }).catch((error) => {
+                alert("El detalle de la respuesta es obligatorio")
+                console.log(error)
+            })
+        } else {
+            alert("El titulo y descripcion de la pregunta son obligatorios")
+          }
+        
     };
   
     const returnUserHome = () => {

@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Question Answer Test
+## Autor
+**Nikolai Bermudez Vega**  
+## Resumen
+El objetivo es construir una aplicación Simple de Questions & Answers con funcionalidad básica al estilo  StackOverflow
+## Prerequisitos
+Tener instalado:
+- Node.js.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Entender sobre peticiones http, docker (contenedores), servidores y demás, así como el lenguaje JAVA en el que fue realizado este proyecto.
 
-## Available Scripts
 
-In the project directory, you can run:
+## ¿Cómo usar el aplicativo?
+Descargue o clone el repositorio con el siguiente comando.
 
-### `npm start`
+    git clone https://github.com/Nikolai9906/Questions-Answer---Test-Front
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Luego abra el proyecto con su entorno de desarrollo preferido ( Se recomienda Visual Studio Code)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Compile las dependecias que le pedira el proyecto con el siguiente comando
 
-### `npm test`
+    npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Por ultimo corralo con ayuda de la terminal con el siguiente comando
 
-### `npm run build`
+    npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**TENER EN CUENTA:** Para que el proyecto funcione correctamente hay que tener corriendo simultáneamente los dos proyectos tanto el backend como el frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Proyecto Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://github.com/Nikolai9906/Questions-Answer---Test
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Operaciones
+Podremos realizar multiples acciones como:
+- Usuarios sin ingresar:
+  - Ver preguntas
+  - Ver respuestas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Usuarion ya ingresados:
+  - Ver preguntas
+  - Ver respuestas
+  - Hacer preguntas
+  - Hacer respuestas
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Pruebas
+### Home de la aplicacion
+![](img/home.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Vista de respuesta vacias
+![](img/respuesta%20vacia.png)
 
-### Code Splitting
+### Vista de respuestas
+![](img/respuesta.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Tecnologias y herramientas
+- [Mui](https://mui.com) Libreria de componentes
 
-### Analyzing the Bundle Size
+- [Axios](https://www.npmjs.com/package/axios) Librería JavaScript que puede ejecutarse en el navegador y que nos permite hacer sencillas las operaciones como cliente HTTP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Construido
+- [Nodejs](https://nodejs.org/es/) Entorno de ejecucion para JavaScript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Visual Studio Code](https://code.visualstudio.com) Editor de Nodejs donde se puede ejecutar el proyecto
 
-### Advanced Configuration
+- [Docker](https://www.docker.com/) Administrador de contenedores.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Licencia
+Este programa es de uso libre, puede ser usado por cualquier persona.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Los terminos de la licencia se pueden encontrar en el siguiente archivo [License](LICENSE).

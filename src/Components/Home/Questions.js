@@ -62,7 +62,7 @@ function Question() {
             question.map((ele, index) => {
                 return(
                     <Grid item sx={12} style={{paddingTop: '40px'}}>
-                        <Card sx={{ minWidth: 275 }} style={{backgroundColor: "#0291bb", backgroundOpac: "100%"}}>
+                        <Card sx={{ minWidth: 275 }} >
                             <CardContent>
                                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                 {ele.emailUser}
@@ -85,7 +85,7 @@ function Question() {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button onClick={() => getId(ele.id)} style={{color: "white"}} size="small">Respuestas</Button>
+                                <Button onClick={() => getId(ele.id)}  variant="outlined" size="small">Respuestas</Button>
                                 
                             </CardActions>
                         </Card>

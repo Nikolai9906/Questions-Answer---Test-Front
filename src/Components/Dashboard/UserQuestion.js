@@ -25,9 +25,6 @@ function UserQuestion() {
         axios.get(`http://localhost:8080/v1/question`)
         .then((res) => {
             setQuestion(res.data.reverse())
-            //console.log(question)
-            //console.log(detail)
-            //console.log(answers);
             
         }).catch((error) => {
             console.log(error)
@@ -62,7 +59,7 @@ function UserQuestion() {
             question.map((ele, index) => {
                 return(
                     <Grid item sx={12} style={{paddingTop: '40px'}}>
-                        <Card sx={{ minWidth: 275 }} style={{backgroundColor: "#0291bb", backgroundOpac: "100%"}}>
+                        <Card sx={{ minWidth: 275 }} style={{ backgroundOpac: "100%"}}>
                             <CardContent>
                                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                 {ele.emailUser}
@@ -85,7 +82,7 @@ function UserQuestion() {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button onClick={() => getId(ele.id)} style={{color: "white"}} size="small">Respuestas</Button>
+                                <Button onClick={() => getId(ele.id)} style={{}} variant="outlined" size="small">Respuestas</Button>
                                 
                             </CardActions>
                         </Card>
